@@ -26,3 +26,4 @@ function switchTab(tab) {
     panelFreelancer.classList.add("hidden");
   }
 }
+

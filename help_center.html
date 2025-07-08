@@ -6,19 +6,24 @@
   <link href="./output.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/script1.js"></script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 <body class="bg-white text-gray-800">
 
-  <!-- Navbar -->
-  <nav class="flex items-center justify-between px-6 py-4 bg-white shadow sticky top-0 z-50">
-  
-  <div class="font-bold text-3xl">Help Center</div>
+ <!-- Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <nav class="px-6 py-4 relative flex items-center justify-between flex-wrap">
 
-  <div class="flex items-center space-x-6">
-    <button class="text-lg hover:underline px-8">Find Talent</button>
-    <button class="text-lg hover:underline pr-8">Explore Services</button>
-    <input type="text" placeholder="Search Project" class="border rounded px-3 py-1 text-base" />
-    <button class="p-2 hover:opacity-60">
+      <div class="font-bold text-2xl z-50">Help Center</div>
+
+      <div class="hidden md:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
+        <a href="#" class="hover:text-gray-500">Find Talent</a>
+        <a href="#" class="hover:text-gray-500">Explore Services</a>
+        <input type="text" placeholder="Search Project" class="border rounded px-3 py-1 text-sm w-48" />
+      </div>
+
+      <div class="hidden md:flex items-center gap-4">
+       <button class="p-2 hover:opacity-60">
        <img src="/asset/notif.png" alt="Logo Button" class="w-5 h-6" />
     </button>
     <button class="p-2 hover:opacity-60">
@@ -26,35 +31,61 @@
     </button>
     <button class="text-lg hover:underline p-2">Orders</button>
     <div class="w-12 h-12 bg-gray-500 rounded-full flex items-center justify-center text-white font-bold"></div>
-  </div>
+      </div>
 
-  
-</nav>
+      <div class="flex-1 md:hidden ml-4 mr-2">
+        <input type="text" placeholder="Search" class="border rounded px-3 py-1 text-sm w-full" />
+      </div>
 
+      <div class="md:hidden z-50">
+        <ion-icon name="menu" id="menuBtn" class="text-3xl cursor-pointer"></ion-icon>
+      </div>
+    </nav>
 
+    <div id="navLinks"
+  class="hidden md:hidden flex flex-col space-y-4 bg-white shadow mt-2 px-6 py-6 z-40 rounded text-left">
 
-  <!-- Search Section -->
-  <section class="bg-gray-200 text-center py-10 px-6 m-5  rounded-xl ">
-    <h1 class="text-4xl font-semibold m-16">
-    How Can We Help you <span class="text-gray-500">Gendis</span>?
-    </h1>
-    <input type="text" placeholder="Search" class="w-1/2 px-4 py-2 rounded-3xl border m-5" />
-    <div class="flex items-center justify-center flex-wrap gap-4 m-6">
-        <h2 class="font-semibold">Popular Searches</h2>
-
-        <button class=" text-sm px-4 py-1 rounded-full border border-black">
-            Web Development
-        </button>
-        <button class=" text-sm px-4 py-1 rounded-full border border-black ">
-            Web Development
-        </button>
-        <button class=" text-sm px-4 py-1 rounded-full border border-black">
-          Web Development
-        </button>
-       
+      <a href="#" class="hover:text-gray-500 block">Find Talent</a>
+      <a href="#" class="hover:text-gray-500 block">Explore Services</a>
+      <a href="#" class="hover:text-gray-500 block">Notification</a>
+      <a href="#" class="hover:text-gray-500 block">Message</a>
+      <a href="#" class="hover:text-gray-500 block">Orders</a>
+      <a href="#" class="hover:text-gray-500 block">Profile</a>
     </div>
+  </header>
 
-  </section>
+
+
+ <!-- Search Section -->
+      <section class="bg-gray-200 text-center py-10 px-6 m-5 rounded-xl">
+        <h1 class="text-2xl md:text-4xl font-semibold m-4 md:m-16">
+          How Can We Help you <span class="text-gray-500">Gendis</span>?
+        </h1>
+
+        <input
+          type="text"
+          placeholder="Search"
+          class="w-full sm:w-2/3 md:w-1/2 px-4 py-2 md:py-3 rounded-3xl border "
+        />
+
+        <div class="flex flex-col items-center justify-center gap-4 m-6">
+        
+
+          <div class="flex flex-wrap justify-center gap-2">
+            <h2 class="font-semibold">Popular Searches</h2>
+            <button class="text-sm px-4 py-1 rounded-full border border-black">
+              Web Development
+            </button>
+            <button class="text-sm px-4 py-1 rounded-full border border-black">
+             Web Development
+            </button>
+            <button class="text-sm px-4 py-1 rounded-full border border-black">
+              Web Development
+            </button>
+          </div>
+        </div>
+      </section>
+
  <!-- Results Section -->
 
 <section class="text-left py-10 px-6">
@@ -62,14 +93,14 @@
   <div class="flex mb-10 gap-6">
         <button
           id="tabFreelancer"
-          class="tab-btn px-6 py-1 text-xl text-black rounded bg-gray-200"
+          class="tab-btn px-6 py-1 text-base md:text-xl text-black rounded bg-gray-200"
           onclick="switchTab('Freelancer')"
         >
           Freelancer
         </button>
         <button
           id="tabClient"
-          class="tab-btn px-10 py-1 text-xl text-black rounded border border-black"
+          class="tab-btn px-10 py-1 text-base md:text-xl text-black rounded border border-black"
           onclick="switchTab('Client')"
         >
           Client
@@ -78,37 +109,37 @@
 
       <div id="panelFreelancer" class=" mb-8">
        <div class="flex-shrink-0  border border-black rounded-xl text-left m-4 p-4">
-              <p class="text-3xl mb-2">When Bla bla blaa</p>
-              <p class="text-xl mb-8">You can see bla bla blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <button class="text-base font-bold hover:underline">Continue Reading</button>              
+              <p class="text-2xl md:text-3xl mb-2">When Bla bla blaa</p>
+              <p class="text-sm md:text-xl mb-8">You can see bla bla blaaaaaaaaaaaaaaaaa</p>
+              <button class="text-sm md:text-base font-bold hover:underline">Continue Reading</button>              
         </div>
         <div class="flex-shrink-0  border border-black rounded-xl text-left m-4 p-4">
-              <p class="text-3xl mb-2">When Bla bla blaa</p>
-              <p class="text-xl mb-8">You can see bla bla blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <button class="text-base font-bold hover:underline">Continue Reading</button>              
+              <p class="text-2xl md:text-3xl mb-2">When Bla bla blaa</p>
+              <p class="text-sm md:text-xl mb-8">You can see bla bla blaaaaaaaaaaaaaaaaa</p>
+              <button class="text-sm md:text-base font-bold hover:underline">Continue Reading</button>              
         </div>
         <div class="flex-shrink-0  border border-black rounded-xl text-left m-4 p-4">
-              <p class="text-3xl mb-2">When Bla bla blaa</p>
-              <p class="text-xl mb-8">You can see bla bla blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <button class="text-base font-bold hover:underline">Continue Reading</button>              
+              <p class="text-2xl md:text-3xl mb-2">When Bla bla blaa</p>
+              <p class="text-sm md:text-xl mb-8">You can see bla bla blaaaaaaaaaaaaaaaaa</p>
+              <button class="text-sm md:text-base font-bold hover:underline">Continue Reading</button>              
         </div>
       </div>
 
       <div id="panelClient" class="mb-8">
        <div class="flex-shrink-0  border border-black rounded-xl text-left m-4 p-4">
-              <p class="text-3xl mb-2">When Bla bla blaa</p>
-              <p class="text-xl mb-8">You can see bla bla blaa</p>
-              <button class="text-base font-bold hover:underline">Continue Reading</button>              
+              <p class="text-2xl md:text-3xl mb-2">When Bla bla blaa</p>
+              <p class="text-sm md:text-xl mb-8">You can see bla bla bla</p>
+              <button class="text-sm md:text-base font-bold hover:underline">Continue Reading</button>              
         </div>
         <div class="flex-shrink-0  border border-black rounded-xl text-left m-4 p-4">
-              <p class="text-3xl mb-2">When Bla bla blaa</p>
-              <p class="text-xl mb-8">You can see bla bla blaa</p>
-              <button class="text-base font-bold hover:underline">Continue Reading</button>              
+              <p class="text-2xl md:text-3xl mb-2">When Bla bla blaa</p>
+              <p class="text-sm md:text-xl mb-8">You can see bla bla bla</p>
+              <button class="text-sm md:text-base font-bold hover:underline">Continue Reading</button>              
         </div>
         <div class="flex-shrink-0  border border-black rounded-xl text-left m-4 p-4">
-              <p class="text-3xl mb-2">When Bla bla blaa</p>
-              <p class="text-xl mb-8">You can see bla bla blaa</p>
-              <button class="text-base font-bold hover:underline">Continue Reading</button>              
+              <p class="text-2xl md:text-3xl mb-2">When Bla bla blaa</p>
+              <p class="text-sm md:text-xl mb-8">You can see bla bla bla</p>
+              <button class="text-sm md:text-base font-bold hover:underline">Continue Reading</button>              
         </div>
     </div>
     <div class="flex justify-end">
@@ -122,15 +153,15 @@
   <section class="px-6 py-8">
     <h2 class="text-2xl font-semibold mb-6">Real result from clients</h2>
     <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8">
-        <button class="bg-gray-200 text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
-        <button class="bg-gray-200 text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
-        <button class="bg-gray-200 text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
-        <button class="bg-gray-200 text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
-        <button class="bg-gray-200 text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
-        <button class="bg-gray-200 text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
-        <button class="bg-gray-200 text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
-        <button class="bg-gray-200 text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
-        <button class="bg-gray-200 text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
+        <button class="bg-gray-200 text-sm md:text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
+        <button class="bg-gray-200 text-sm md:text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
+        <button class="bg-gray-200 text-sm md:text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
+        <button class="bg-gray-200 text-sm md:text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
+        <button class="bg-gray-200 text-sm md:text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
+        <button class="bg-gray-200 text-sm md:text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
+        <button class="bg-gray-200 text-sm md:text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
+        <button class="bg-gray-200 text-sm md:text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
+        <button class="bg-gray-200 text-sm md:text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
       </div>
 
   </section>
@@ -182,7 +213,17 @@
   </div>
 </section>
 
+<script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
 
+    let menuOpen = false;
+    menuBtn.addEventListener("click", () => {
+      menuOpen = !menuOpen;
+      menuBtn.name = menuOpen ? "close" : "menu";
+      navLinks.classList.toggle("hidden");
+    });
+  </script>
 
 </body>
 
