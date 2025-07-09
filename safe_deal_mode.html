@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Safe Deal Mode</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Header -->
+  <nav class="flex items-center justify-between px-6 py-4 bg-white shadow sticky top-0 z-50">
+    <div class="font-bold text-3xl">Logo</div>
+
+    <div class="flex items-center space-x-4">
+      <button class="text-lg hover:underline px-8">Find Talent</button>
+      <button class="text-lg hover:underline pr-8">Explore Services</button>
+      <div class="relative">
+        <input type="text" placeholder="Search Project" class="border rounded px-3 py-1 text-base bg-gray-100" />
+        <span class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500">🔍</span>
+      </div>
+    </div>
+
+    <div class="flex items-center space-x-4">
+      <button class="text-xl">🔔</button>
+      <button class="text-xl">✉️</button>
+      <span>Orders</span>
+      <div class="w-8 h-8 rounded-full bg-gray-500"></div>
+    </div>
+  </nav>
+
+  <!-- Kategori -->
+  <div class="flex items-center space-x-2 px-6 py-4 overflow-x-auto">
+    <button class="border px-4 py-1 rounded-full whitespace-nowrap">‹</button>
+    <span class="border rounded-full px-4 py-1">Digital Marketing</span>
+    <span class="border rounded-full px-4 py-1">Digital Marketing</span>
+    <span class="border rounded-full px-4 py-1">Digital Marketing</span>
+    <span class="border rounded-full px-4 py-1">Digital Marketing</span>
+    <button class="border px-4 py-1 rounded-full whitespace-nowrap">›</button>
+  </div>
+
+  <!-- Safe Deal Mode Grid (Fixed Layout) -->
+<div class="px-6 py-8">
+  <h2 class="text-2xl font-semibold mb-8">Safe Deal Mode</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Repeat this card -->
+    <div class="bg-gray-200 p-5 rounded-lg flex flex-col justify-between h-44">
+      <div>
+        <h3 class="font-semibold mb-2 text-center">Down Payment System</h3>
+        <p class="text-sm text-center">Klien membayar sebagian di awal, sisanya saat pekerjaan selesai.</p>
+      </div>
+      <div class="text-center mt-4">
+        <button class="bg-white px-4 py-1 rounded-full text-sm">Enter</button>
+      </div>
+    </div>
+
+    <!-- Tambahkan 5 card lainnya seperti di atas -->
+    <div class="bg-gray-200 p-5 rounded-lg flex flex-col justify-between h-44">
+      <div>
+        <h3 class="font-semibold mb-2 text-center">Digital Work Agreement</h3>
+        <p class="text-sm text-center">Perjanjian kerja singkat otomatis yang mencakup deadline, revisi, dan scope pekerjaan.</p>
+      </div>
+      <div class="text-center mt-4">
+        <button class="bg-white px-4 py-1 rounded-full text-sm">Enter</button>
+      </div>
+    </div>
+
+    <div class="bg-gray-200 p-5 rounded-lg flex flex-col justify-between h-44">
+      <div>
+        <h3 class="font-semibold mb-2 text-center">File Locking</h3>
+        <p class="text-sm text-center">Freelancer bisa kirim preview dengan watermark atau versi non-final, yang bisa dibuka penuh setelah pembayaran akhir.</p>
+      </div>
+      <div class="text-center mt-4">
+        <button class="bg-white px-4 py-1 rounded-full text-sm">Enter</button>
+      </div>
+    </div>
+
+    <div class="bg-gray-200 p-5 rounded-lg flex flex-col justify-between h-44">
+      <div>
+        <h3 class="font-semibold mb-2 text-center">Dispute Resolution Button</h3>
+        <p class="text-sm text-center">Jika ada masalah, kedua pihak bisa meminta bantuan admin sebagai penengah.</p>
+      </div>
+      <div class="text-center mt-4">
+        <button class="bg-white px-4 py-1 rounded-full text-sm">Enter</button>
+      </div>
+    </div>
+
+    <div class="bg-gray-200 p-5 rounded-lg flex flex-col justify-between h-44">
+      <div>
+        <h3 class="font-semibold mb-2 text-center">Mutual Confirmation</h3>
+        <p class="text-sm text-center">Pekerjaan baru ditandai “selesai” jika dua pihak sudah setuju (klien klik “Accept”).</p>
+      </div>
+      <div class="text-center mt-4">
+        <button class="bg-white px-4 py-1 rounded-full text-sm">Enter</button>
+      </div>
+    </div>
+
+    <!-- Tambahkan 1 kotak kosong agar layout tetap 3 kolom simetris jika perlu -->
+    <div class="invisible"></div>
+  </div>
+</div>
