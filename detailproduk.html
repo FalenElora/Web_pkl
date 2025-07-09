@@ -4,166 +4,295 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail Product</title>
-    <link href="../src/output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
   </head>
   <body class="bg-white text-gray-800">
+
     <!-- Navbar -->
-    <nav class="flex items-center justify-between px-6 py-4 bg-white shadow sticky top-0 z-50">
-      <div class="font-bold text-3xl">Logo</div>
-      <div class="hidden md:flex items-center space-x-4">
-        <button class="text-lg hover:underline px-8">Find Talent</button>
-        <button class="text-lg hover:underline pr-8">Explore Services</button>
-        <input type="text" placeholder="Search Project" class="border rounded px-3 py-1 text-base" />
-      </div>
-      <div class="hidden md:flex space-x-2">
-        <button class="px-6 py-2 border rounded bg-gray-100 hover:bg-gray-200">Sign In</button>
-        <button class="px-6 py-2 border rounded bg-gray-100 hover:bg-gray-200">Login</button>
-      </div>
-    </nav>
+    <header class="bg-white shadow sticky top-0 z-50">
+      <nav class="px-6 py-4 relative flex items-center justify-between flex-wrap">
+        <div class="font-bold text-2xl z-50">Logo</div>
 
-    <!-- Breadcrumbs -->
-    <div class="flex flex-wrap gap-2 p-4 text-sm text-gray-600">
-      <span class="bg-gray-200 px-2 py-1 rounded">Digital Marketing</span>
-      <span class="bg-gray-200 px-2 py-1 rounded">Digital Marketing</span>
-      <span class="bg-gray-200 px-2 py-1 rounded">Digital Marketing</span>
-      <span class="bg-gray-200 px-2 py-1 rounded">Digital Marketing</span>
-    </div>
-
-    <!-- Main Content -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 p-4">
-      <!-- Left Content -->
-      <div class="lg:col-span-2">
-        <h1 class="text-2xl font-semibold mb-2">I Will Do Blablablablablaa</h1>
-        <div class="flex items-center gap-2 text-sm text-gray-500 mb-4">
-          <span class="font-semibold text-black">Gendis</span>
-          <span>⭐ 4.9 (198)</span>
-        </div>
-        <div class="bg-gray-200 h-64 rounded mb-4"></div>
-        <div class="flex gap-2 mb-8 overflow-x-auto">
-          <div class="bg-gray-300 w-20 h-20 rounded flex-shrink-0"></div>
-          <div class="bg-gray-300 w-20 h-20 rounded flex-shrink-0"></div>
-          <div class="bg-gray-300 w-20 h-20 rounded flex-shrink-0"></div>
-        </div>
-
-        <h2 class="text-xl font-semibold mb-2">Project details</h2>
-        <p class="text-gray-700 mb-4">Hey, why are you worried about your creative logo? Check out my service and place your order without any hesitation what you get.</p>
-        <ul class="list-disc list-inside mb-8 text-gray-700">
-          <li>Minimalist Flat Logo Design</li>
-          <li>Luxury Logo Design</li>
-          <li>Custom Logo Design</li>
-          <li>All type of logos whatever you want!</li>
-        </ul>
-
-        <h2 class="text-xl font-semibold mb-2">Reviews</h2>
-        <div class="flex justify-between items-center mb-2">
-          <p class="font-medium">See all</p>
-        </div>
-        <div class="space-y-4">
-          <div class="border rounded p-4">
-            <p class="font-semibold">Gendis ⭐⭐⭐⭐ 4</p>
-            <p class="text-sm text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-          </div>
-          <div class="border rounded p-4">
-            <p class="font-semibold">Gendis ⭐⭐⭐⭐ 4</p>
-            <p class="text-sm text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-          </div>
-          <div class="border rounded p-4">
-            <p class="font-semibold">Gendis ⭐⭐⭐⭐ 4</p>
-            <p class="text-sm text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <!-- Center Nav -->
+        <div class="hidden md:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
+          <a href="#" class="hover:text-gray-500">Find Talent</a>
+          <a href="#" class="hover:text-gray-500">Explore Services</a>
+          <div class="relative">
+            <input type="text" placeholder="Search Project" class="border rounded px-3 py-1 text-sm w-48 pr-10" />
+            <button class="absolute right-2 top-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M10 18a8 8 0 100-16 8 8 0 000 16z" />
+              </svg>
+            </button>
           </div>
         </div>
-      </div>
 
-      <!-- Right Sidebar -->
-      <div class="bg-gray-100 p-4 rounded space-y-4">
-        <div>
-          <h3 class="text-lg font-semibold">Basic</h3>
-          <p class="text-xl font-bold">70$</p>
-          <ul class="list-disc list-inside text-sm mt-2 text-gray-700">
-            <li>5 Design Concepts</li>
-            <li>3D Mockup</li>
-            <li>Delivery: 1 day</li>
-            <li>Revisions: 4</li>
-            <li>Printable Resolution</li>
-            <li>Logo Transparency</li>
-            <li>Vector File</li>
-          </ul>
+        <!-- Right Nav -->
+        <div class="hidden md:flex items-center gap-6">
+          <!-- Notification -->
+          <div class="relative">
+            <button id="notifBtn">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405M18 14.158V11a6 6 0 00-9.33-5.004" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 13v1.158c0 .538-.214 1.055-.595 1.437L4 17h5m1 0v1a3 3 0 006 0v-1m-6 0h6" />
+              </svg>
+            </button>
+            <div id="notifPanel" class="hidden absolute right-0 mt-2 w-80 bg-white border border-gray-200 rounded shadow-lg z-50 p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405M18 14.158V11a6 6 0 00-12 0v3.158l-1.595 1.437L5 17h14" />
+                </svg>
+                <span class="font-semibold">Notifications (0)</span>
+              </div>
+              <hr class="mb-4">
+              <div class="text-center">
+                <p class="font-semibold text-gray-800">No Notifications...yet</p>
+                <p class="text-sm text-gray-500 mt-1">The more you do out there,<br>the more you'll see in here.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Message Button + Dropdown -->
+          <div class="relative">
+            <button id="messageBtn">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h6m-6 4h8m2 4H5a2 2 0 01-2-2V5a2 2 0 012-2h10l6 6v11a2 2 0 01-2 2z" />
+              </svg>
+            </button>
+            <div id="messagePanel" class="hidden absolute right-0 mt-2 w-80 bg-white border border-gray-200 rounded shadow-lg z-50 p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h6m-6 4h8m2 4H5a2 2 0 01-2-2V5a2 2 0 012-2h10l6 6v11a2 2 0 01-2 2z" />
+                </svg>
+                <span class="font-semibold">Messages</span>
+              </div>
+              <hr class="mb-4">
+              <div class="text-center">
+                <p class="font-semibold text-gray-800">No messages yet</p>
+                <p class="text-sm text-gray-500 mt-1">You don’t have any conversations.</p>
+              </div>
+              <hr class="my-3">
+              <a href="message.html" class="block text-center text-blue-500 text-sm hover:underline">See all</a>
+            </div>
+          </div>
+
+          <!-- Profile -->
+          <div class="w-8 h-8 bg-gray-400 rounded-full"></div>
         </div>
-        <p class="text-sm text-gray-500">1 day delivery — Jun 26, 2025</p>
-        <button class="bg-black text-white w-full py-2 rounded">Continue</button>
-        <button class="border w-full py-2 rounded">Message</button>
-      </div>
-    </div>
 
-    <!-- Seller Profile -->
-    <div class="p-4 mt-8 border-t">
-      <div class="flex flex-col sm:flex-row items-center gap-4 mb-4">
-        <div class="w-20 h-20 rounded-full bg-gray-300"></div>
-        <div class="text-center sm:text-left">
-          <h4 class="font-semibold">Aurelia Gendis</h4>
-          <p class="text-sm text-gray-600">Team of creative</p>
-          <p class="text-sm text-gray-600">⭐ 4.9 (153) • Level 2 ⭐⭐</p>
+        <!-- Mobile Search -->
+        <div class="flex-1 md:hidden ml-4 mr-2">
+          <input type="text" placeholder="Search" class="border rounded px-3 py-1 text-sm w-full" />
         </div>
-      </div>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <button class="border px-4 py-2 rounded">Contact me</button>
-        <button class="border px-4 py-2 rounded">Book a consultation</button>
-      </div>
-    </div>
 
-    <!-- More Projects -->
-    <div class="p-4 mt-8">
-      <h3 class="font-semibold text-lg mb-4">More Projects From Aurelia Gendis</h3>
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-        <div class="bg-gray-200 h-40 rounded"></div>
-        <div class="bg-gray-200 h-40 rounded"></div>
-        <div class="bg-gray-200 h-40 rounded"></div>
-        <div class="bg-gray-200 h-40 rounded"></div>
-      </div>
-    </div>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden z-50">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="menuBtn">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </div>
+      </nav>
 
-    <!-- Recommendations -->
-    <div class="p-4 mt-8">
-      <h3 class="font-semibold text-lg mb-4">Recommended for you</h3>
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-        <div class="bg-gray-200 h-40 rounded"></div>
-        <div class="bg-gray-200 h-40 rounded"></div>
-        <div class="bg-gray-200 h-40 rounded"></div>
-        <div class="bg-gray-200 h-40 rounded"></div>
+      <!-- Mobile Nav Menu -->
+      <div id="navLinks" class="hidden md:hidden flex flex-col space-y-4 bg-white shadow mt-2 px-6 py-6 z-40 rounded text-left">
+        <a href="#" class="hover:text-gray-500 block">Find Talent</a>
+        <a href="#" class="hover:text-gray-500 block">Explore Services</a>
+        <button class="w-full px-4 py-2 border rounded bg-gray-100 hover:bg-gray-200">Sign In</button>
+        <button class="w-full px-4 py-2 border rounded bg-gray-100 hover:bg-gray-200">Login</button>
       </div>
-    </div>
+    </header>
 
-    <!-- Footer -->
-    <footer class="bg-gray-100 mt-10 p-8 grid grid-cols-2 sm:grid-cols-4 gap-8 text-sm text-gray-600">
-      <div>
-        <h4 class="font-semibold mb-2">for clients</h4>
-        <ul class="space-y-1">
-          <li>how to hire</li>
-          <li>Project Catalog</li>
-          <li>Enterprise</li>
-          <li>Any Hire</li>
-          <li>Business Plus</li>
-          <li>Contract-to-hire</li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-semibold mb-2">for talents</h4>
-        <ul class="space-y-1">
-          <li>how to</li><li>how to</li><li>how to</li><li>how to</li><li>how to</li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-semibold mb-2">resources</h4>
-        <ul class="space-y-1">
-          <li>how to</li><li>how to</li><li>how to</li><li>how to</li><li>how to</li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-semibold mb-2">company</h4>
-        <ul class="space-y-1">
-          <li>how to</li><li>how to</li><li>how to</li><li>how to</li><li>how to</li>
-        </ul>
-      </div>
-    </footer>
+
+
   </body>
+
+  <!--  Script Interaksi -->
+  <script>
+    // Notif Dropdown
+    document.getElementById("notifBtn").addEventListener("click", function () {
+      const panel = document.getElementById("notifPanel");
+      panel.classList.toggle("hidden");
+    });
+
+    // Message Dropdown + klik luar nutupin
+    const msgBtn = document.getElementById("messageBtn");
+    const msgPanel = document.getElementById("messagePanel");
+
+    msgBtn.addEventListener("click", () => {
+      msgPanel.classList.toggle("hidden");
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!msgBtn.contains(e.target) && !msgPanel.contains(e.target)) {
+        msgPanel.classList.add("hidden");
+      }
+    });
+  </script>
+</html>
+
+<!-- Semua isi konten di bawah ini tidak diubah dan tetap seperti versi awal -->
+<!-- Category Scroll -->
+<div class="flex items-center bg-white px-4 py-3 space-x-2 overflow-hidden ">
+  <button id="scrollLeft" class="text-xl px-2">&lt;</button>
+  <div id="scrollContainer" class="flex w-full overflow-x-auto space-x-2 scrollbar-hide m-4">
+    <button class="bg-gray-200 px-4 py-1 rounded-full text-base whitespace-nowrap">Digital Marketing</button>
+    <button class="bg-gray-200 px-4 py-1 rounded-full text-base whitespace-nowrap">Digital Marketing</button>
+    <button class="bg-gray-200 px-4 py-1 rounded-full text-base whitespace-nowrap">Digital Marketing</button>
+    <button class="bg-gray-200 px-4 py-1 rounded-full text-base whitespace-nowrap">Digital Marketing</button>
+    <button class="bg-gray-200 px-4 py-1 rounded-full text-base whitespace-nowrap">Digital Marketing</button>
+    <button class="bg-gray-200 px-4 py-1 rounded-full text-base whitespace-nowrap">Digital Marketing</button>
+     <button class="bg-gray-200 px-4 py-1 rounded-full text-base whitespace-nowrap">Digital Marketing</button>
+    <button class="bg-gray-200 px-4 py-1 rounded-full text-base whitespace-nowrap">Digital Marketing</button>
+    <button class="bg-gray-200 px-4 py-1 rounded-full text-base whitespace-nowrap">Digital Marketing</button>
+    <button class="bg-gray-200 px-4 py-1 rounded-full text-base whitespace-nowrap">Digital Marketing</button>
+    <button class="bg-gray-200 px-4 py-1 rounded-full text-base whitespace-nowrap">Digital Marketing</button>
+    <button class="bg-gray-200 px-4 py-1 rounded-full text-base whitespace-nowrap">Digital Marketing</button>
+  </div>
+  <button id="scrollRight" class="text-xl px-2">&gt;</button>
+</div>
+
+<!-- Main Content -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 p-4">
+  <!-- Left Content -->
+  <div class="lg:col-span-2">
+    <h1 class="text-2xl font-semibold mb-2">I Will Do Blablablablablaa</h1>
+    <div class="flex items-center gap-2 text-sm text-gray-500 mb-4">
+      <span class="font-semibold text-black">Gendis</span>
+      <span>⭐ 4.9 (198)</span>
+    </div>
+    <div class="bg-gray-200 h-64 rounded mb-4"></div>
+    <div class="flex gap-2 mb-8 overflow-x-auto">
+      <div class="bg-gray-300 w-20 h-20 rounded flex-shrink-0"></div>
+      <div class="bg-gray-300 w-20 h-20 rounded flex-shrink-0"></div>
+      <div class="bg-gray-300 w-20 h-20 rounded flex-shrink-0"></div>
+    </div>
+    <h2 class="text-xl font-semibold mb-2">Project details</h2>
+    <p class="text-gray-700 mb-4">Hey, why are you worried about your creative logo? Check out my service and place your order without any hesitation what you get.</p>
+    <ul class="list-disc list-inside mb-8 text-gray-700">
+      <li>Minimalist Flat Logo Design</li>
+      <li>Luxury Logo Design</li>
+      <li>Custom Logo Design</li>
+      <li>All type of logos whatever you want!</li>
+    </ul>
+    <h2 class="text-xl font-semibold mb-2">Reviews</h2>
+    <div class="flex justify-between items-center mb-2">
+      <p class="font-medium">See all</p>
+    </div>
+    <div class="space-y-4">
+      <div class="border rounded p-4">
+        <p class="font-semibold">Gendis ⭐⭐⭐⭐ 4</p>
+        <p class="text-sm text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+      </div>
+      <div class="border rounded p-4">
+        <p class="font-semibold">Gendis ⭐⭐⭐⭐ 4</p>
+        <p class="text-sm text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+      </div>
+      <div class="border rounded p-4">
+        <p class="font-semibold">Gendis ⭐⭐⭐⭐ 4</p>
+        <p class="text-sm text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+      </div>
+    </div>
+  </div>
+  <!-- Right Sidebar -->
+  <div class="bg-gray-100 p-4 rounded space-y-4">
+    <div>
+      <h3 class="text-lg font-semibold">Basic</h3>
+      <p class="text-xl font-bold">70$</p>
+      <ul class="list-disc list-inside text-sm mt-2 text-gray-700">
+        <li>5 Design Concepts</li>
+        <li>3D Mockup</li>
+        <li>Delivery: 1 day</li>
+        <li>Revisions: 4</li>
+        <li>Printable Resolution</li>
+        <li>Logo Transparency</li>
+        <li>Vector File</li>
+      </ul>
+    </div>
+    <p class="text-sm text-gray-500">1 day delivery — Jun 26, 2025</p>
+    <button class="bg-black text-white w-full py-2 rounded">Continue</button>
+    <button class="border w-full py-2 rounded">Message</button>
+  </div>
+</div>
+
+<!-- Seller Profile -->
+<div class="p-4 mt-8 border-t">
+  <div class="flex flex-col sm:flex-row items-center gap-4 mb-4">
+    <div class="w-20 h-20 rounded-full bg-gray-300"></div>
+    <div class="text-center sm:text-left">
+      <h4 class="font-semibold">Aurelia Gendis</h4>
+      <p class="text-sm text-gray-600">Team of creative</p>
+      <p class="text-sm text-gray-600">⭐ 4.9 (153) • Level 2 ⭐⭐</p>
+    </div>
+  </div>
+  <div class="flex flex-col sm:flex-row gap-4">
+    <button class="border px-4 py-2 rounded">Contact me</button>
+    <button class="border px-4 py-2 rounded">Book a consultation</button>
+  </div>
+</div>
+
+<!-- More Projects -->
+<div class="p-4 mt-8">
+  <h3 class="font-semibold text-lg mb-4">More Projects From Aurelia Gendis</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div class="bg-gray-200 h-40 rounded"></div>
+    <div class="bg-gray-200 h-40 rounded"></div>
+    <div class="bg-gray-200 h-40 rounded"></div>
+    <div class="bg-gray-200 h-40 rounded"></div>
+  </div>
+</div>
+
+<!-- Recommendations -->
+<div class="p-4 mt-8">
+  <h3 class="font-semibold text-lg mb-4">Recommended for you</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div class="bg-gray-200 h-40 rounded"></div>
+    <div class="bg-gray-200 h-40 rounded"></div>
+    <div class="bg-gray-200 h-40 rounded"></div>
+    <div class="bg-gray-200 h-40 rounded"></div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-gray-100 mt-10 p-8 grid grid-cols-2 sm:grid-cols-4 gap-8 text-sm text-gray-600">
+  <div>
+    <h4 class="font-semibold mb-2">for clients</h4>
+    <ul class="space-y-1">
+      <li>how to hire</li>
+      <li>Project Catalog</li>
+      <li>Enterprise</li>
+      <li>Any Hire</li>
+      <li>Business Plus</li>
+      <li>Contract-to-hire</li>
+    </ul>
+  </div>
+  <div>
+    <h4 class="font-semibold mb-2">for talents</h4>
+    <ul class="space-y-1">
+      <li>how to</li><li>how to</li><li>how to</li><li>how to</li><li>how to</li>
+    </ul>
+  </div>
+  <div>
+    <h4 class="font-semibold mb-2">resources</h4>
+    <ul class="space-y-1">
+      <li>how to</li><li>how to</li><li>how to</li><li>how to</li><li>how to</li>
+    </ul>
+  </div>
+  <div>
+    <h4 class="font-semibold mb-2">company</h4>
+    <ul class="space-y-1">
+      <li>how to</li><li>how to</li><li>how to</li><li>how to</li><li>how to</li>
+    </ul>
+  </div>
+</footer>
+
+</body>
 </html>

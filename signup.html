@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-white">
+  <div class="w-full max-w-md px-8 py-10 border rounded shadow">
+    <h1 class="text-4xl font-semibold text-center mb-10">Sign Up</h1>
+    <form id="signupForm" class="space-y-6">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+        <input type="email" id="email" required class="w-full border-b border-gray-400 focus:outline-none py-1" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+        <input type="password" id="password" required class="w-full border-b border-gray-400 focus:outline-none py-1" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Repeat Password</label>
+        <input type="password" id="repeatPassword" required class="w-full border-b border-gray-400 focus:outline-none py-1" />
+      </div>
+      <button type="submit" class="w-full py-2 rounded-full bg-gray-600 text-white hover:bg-gray-700">Create Account</button>
+    </form>
+    <p class="text-sm text-center mt-6">
+      Already have an account?
+      <a href="signin.html" class="text-blue-600 hover:underline">Sign In</a>
+    </p>
+  </div>
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const pw = document.getElementById("password").value;
+      const repeat = document.getElementById("repeatPassword").value;
+
+      if (pw !== repeat) {
+        alert("Password tidak sama!");
+        return;
+      }
+
+      localStorage.setItem("userEmail", email);
+      localStorage.setItem("userPassword", pw);
+      alert("Sign Up berhasil! Silakan login.");
+      window.location.href = "signin.html";
+    });
+  </script>
+</body>
+</html>
