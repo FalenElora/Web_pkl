@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-100">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-gray-800 font-sans min-h-screen">
+  <!-- Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <nav class="px-6 py-4 relative flex items-center justify-between flex-wrap">
+
+      <div class="font-bold text-2xl z-50">LOGO</div>
+
+      <div class="hidden md:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
+        <a href="#" class="hover:text-gray-500">Find Talent</a>
+        <a href="#" class="hover:text-gray-500">Explore Services</a>
+        <input type="text" placeholder="Search Project" class="border rounded px-3 py-1 text-sm w-48" />
+      </div>
+
+      <div class="hidden md:flex items-center gap-4">
+       <button class="p-2 hover:opacity-60">
+       <img src="notif.png" alt="Notif Icon" class="w-5 h-6" />
+    </button>
+    <button class="p-2 hover:opacity-60">
+       <img src="inbox.png" alt="Inbox Icon" class="w-6 h-5" />
+    </button>
+    <button class="text-lg hover:underline p-2">Orders</button>
+    <div class="w-12 h-12 bg-gray-500 rounded-full flex items-center justify-center text-white font-bold"></div>
+      </div>
+
+      <div class="flex-1 md:hidden ml-4 mr-2">
+        <input type="text" placeholder="Search" class="border rounded px-3 py-1 text-sm w-full" />
+      </div>
+
+      <div class="md:hidden z-50">
+        <ion-icon name="menu" id="menuBtn" class="text-3xl cursor-pointer"></ion-icon>
+      </div>
+    </nav>
+
+    <div id="navLinks"
+  class="hidden md:hidden flex flex-col space-y-4 bg-white shadow mt-2 px-6 py-6 z-40 rounded text-left">
+
+      <a href="#" class="hover:text-gray-500 block">Find Talent</a>
+      <a href="#" class="hover:text-gray-500 block">Explore Services</a>
+      <a href="#" class="hover:text-gray-500 block">Notification</a>
+      <a href="#" class="hover:text-gray-500 block">Message</a>
+      <a href="#" class="hover:text-gray-500 block">Orders</a>
+      <a href="#" class="hover:text-gray-500 block">Profile</a>
+    </div>
+  </header>
+
+  <!-- Portfolio Cards -->
+  <main class="container mx-auto p-10">
+    <h1 class="text-3xl font-bold mb-4">Portfolio</h1>
+    <p class="text-gray-600 mb-8">Showing 22 Projects</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card -->
+      <a href="portofolio-details.html" class="block bg-white shadow p-4 rounded hover:shadow-md transition">
+        <div class="h-40 bg-gray-300 rounded mb-4"></div>
+        <h2 class="text-xl font-semibold mb-2">Desain Bla bla</h2>
+        <p class="text-gray-500 text-sm mb-1">From : 23 Juni 2023</p>
+        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur ad......</p>
+      </a>
+
+      <!-- Copy-paste more cards -->
+      <a href="portofolio-details.html" class="block bg-white shadow p-4 rounded hover:shadow-md transition">
+        <div class="h-40 bg-gray-300 rounded mb-4"></div>
+        <h2 class="text-xl font-semibold mb-2">Desain Bla bla</h2>
+        <p class="text-gray-500 text-sm mb-1">From : 23 Juni 2023</p>
+        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur ad......</p>
+      </a>
+
+    <a href="portofolio-details.html" class="block bg-white shadow p-4 rounded hover:shadow-md transition">
+        <div class="h-40 bg-gray-300 rounded mb-4"></div>
+        <h2 class="text-xl font-semibold mb-2">Desain Bla bla</h2>
+        <p class="text-gray-500 text-sm mb-1">From : 23 Juni 2023</p>
+        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur ad......</p>
+      </a>
+
+    <a href="portofolio-details.html" class="block bg-white shadow p-4 rounded hover:shadow-md transition">
+        <div class="h-40 bg-gray-300 rounded mb-4"></div>
+        <h2 class="text-xl font-semibold mb-2">Desain Bla bla</h2>
+        <p class="text-gray-500 text-sm mb-1">From : 23 Juni 2023</p>
+        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur ad......</p>
+      </a>
+
+    <a href="portofolio-details.html" class="block bg-white shadow p-4 rounded hover:shadow-md transition">
+        <div class="h-40 bg-gray-300 rounded mb-4"></div>
+        <h2 class="text-xl font-semibold mb-2">Desain Bla bla</h2>
+        <p class="text-gray-500 text-sm mb-1">From : 23 Juni 2023</p>
+        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur ad......</p>
+      </a>
+
+    <a href="portofolio-details.html" class="block bg-white shadow p-4 rounded hover:shadow-md transition">
+        <div class="h-40 bg-gray-300 rounded mb-4"></div>
+        <h2 class="text-xl font-semibold mb-2">Desain Bla bla</h2>
+        <p class="text-gray-500 text-sm mb-1">From : 23 Juni 2023</p>
+        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur ad......</p>
+      </a>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-100">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post a Portfolio</title>
+  <!-- Pakai Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-gray-800 font-sans min-h-screen flex flex-col">
+  <!-- Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <nav class="px-6 py-4 relative flex items-center justify-between flex-wrap">
+
+      <div class="font-bold text-2xl z-50">LOGO</div>
+
+      <div class="hidden md:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
+        <a href="#" class="hover:text-gray-500">Find Talent</a>
+        <a href="#" class="hover:text-gray-500">Explore Services</a>
+        <input type="text" placeholder="Search Project" class="border rounded px-3 py-1 text-sm w-48" />
+      </div>
+
+      <div class="hidden md:flex items-center gap-4">
+       <button class="p-2 hover:opacity-60">
+       <img src="notif.png" alt="Notif Icon" class="w-5 h-6" />
+    </button>
+    <button class="p-2 hover:opacity-60">
+       <img src="inbox.png" alt="Inbox Icon" class="w-6 h-5" />
+    </button>
+    <button class="text-lg hover:underline p-2">Orders</button>
+    <div class="w-12 h-12 bg-gray-500 rounded-full flex items-center justify-center text-white font-bold"></div>
+      </div>
+
+      <div class="flex-1 md:hidden ml-4 mr-2">
+        <input type="text" placeholder="Search" class="border rounded px-3 py-1 text-sm w-full" />
+      </div>
+
+      <div class="md:hidden z-50">
+        <ion-icon name="menu" id="menuBtn" class="text-3xl cursor-pointer"></ion-icon>
+      </div>
+    </nav>
+
+    <div id="navLinks"
+  class="hidden md:hidden flex flex-col space-y-4 bg-white shadow mt-2 px-6 py-6 z-40 rounded text-left">
+
+      <a href="#" class="hover:text-gray-500 block">Find Talent</a>
+      <a href="#" class="hover:text-gray-500 block">Explore Services</a>
+      <a href="#" class="hover:text-gray-500 block">Notification</a>
+      <a href="#" class="hover:text-gray-500 block">Message</a>
+      <a href="#" class="hover:text-gray-500 block">Orders</a>
+      <a href="#" class="hover:text-gray-500 block">Profile</a>
+    </div>
+  </header>
+
+  <!-- Form Section -->
+  <main class="flex-grow flex items-center justify-center p-10">
+    <div class="bg-white max-w-2xl w-full rounded-lg p-8">
+      <h1 class="text-xl font-semibold mb-6">Post a Portfolio</h1>
+
+      <!-- Upload Form -->
+      <div class="border border-gray-300 border-dashed rounded-lg p-8 flex flex-col items-center mb-6">
+        <svg class="w-10 h-10 text-gray-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M12 12v9m0 0l-3-3m3 3l3-3M12 3v9" />
+        </svg>
+        <p class="text-sm text-gray-600">Upload Form</p>
+      </div>
+
+      <!-- Description -->
+      <label class="block mb-2 text-sm font-medium text-gray-700">Description job</label>
+      <textarea class="w-full border border-gray-300 rounded-lg p-3 mb-6" rows="3"></textarea>
+
+      <!-- Grid Inputs -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <!-- Job Category -->
+        <div>
+          <label class="block mb-1 text-sm font-medium text-gray-700">Job category</label>
+          <select class="w-full border border-gray-300 rounded-lg p-3 text-sm">
+            <option>Set to make job searching easier</option>
+          </select>
+        </div>
+
+        <!-- Project Duration -->
+        <div>
+          <label class="block mb-1 text-sm font-medium text-gray-700">Project Duration</label>
+          <input type="text" placeholder="1-2 Months" class="w-full border border-gray-300 rounded-lg p-3 text-sm"/>
+        </div>
+
+        <!-- From -->
+        <div>
+          <label class="block mb-1 text-sm font-medium text-gray-700">From</label>
+          <input type="text" placeholder="23 Juni 2023" class="w-full border border-gray-300 rounded-lg p-3 text-sm"/>
+        </div>
+
+        <!-- Project Cost -->
+        <div>
+          <label class="block mb-1 text-sm font-medium text-gray-700">Project Cost</label>
+          <input type="text" placeholder="$400-$600" class="w-full border border-gray-300 rounded-lg p-3 text-sm"/>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex justify-center gap-4">
+        <button class="px-6 py-2 border rounded">Back</button>
+        <button class="px-6 py-2 border rounded bg-gray-200">Submit</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

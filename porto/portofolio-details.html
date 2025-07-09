@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-100">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Details</title>
+  <!-- Pakai Tailwind CDN instan -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-gray-800 font-sans min-h-screen">
+  <!-- Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <nav class="px-6 py-4 relative flex items-center justify-between flex-wrap">
+
+      <div class="font-bold text-2xl z-50">LOGO</div>
+
+      <div class="hidden md:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
+        <a href="#" class="hover:text-gray-500">Find Talent</a>
+        <a href="#" class="hover:text-gray-500">Explore Services</a>
+        <input type="text" placeholder="Search Project" class="border rounded px-3 py-1 text-sm w-48" />
+      </div>
+
+      <div class="hidden md:flex items-center gap-4">
+       <button class="p-2 hover:opacity-60">
+       <img src="notif.png" alt="Notif Icon" class="w-5 h-6" />
+    </button>
+    <button class="p-2 hover:opacity-60">
+       <img src="inbox.png" alt="Inbox Icon" class="w-6 h-5" />
+    </button>
+    <button class="text-lg hover:underline p-2">Orders</button>
+    <div class="w-12 h-12 bg-gray-500 rounded-full flex items-center justify-center text-white font-bold"></div>
+      </div>
+
+      <div class="flex-1 md:hidden ml-4 mr-2">
+        <input type="text" placeholder="Search" class="border rounded px-3 py-1 text-sm w-full" />
+      </div>
+
+      <div class="md:hidden z-50">
+        <ion-icon name="menu" id="menuBtn" class="text-3xl cursor-pointer"></ion-icon>
+      </div>
+    </nav>
+
+    <div id="navLinks"
+  class="hidden md:hidden flex flex-col space-y-4 bg-white shadow mt-2 px-6 py-6 z-40 rounded text-left">
+
+      <a href="#" class="hover:text-gray-500 block">Find Talent</a>
+      <a href="#" class="hover:text-gray-500 block">Explore Services</a>
+      <a href="#" class="hover:text-gray-500 block">Notification</a>
+      <a href="#" class="hover:text-gray-500 block">Message</a>
+      <a href="#" class="hover:text-gray-500 block">Orders</a>
+      <a href="#" class="hover:text-gray-500 block">Profile</a>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="flex items-center justify-center p-10">
+    <div class="bg-white max-w-4xl w-full rounded-lg p-8 relative shadow">
+      <button class="absolute top-4 right-4 text-xl">&times;</button>
+      <h1 class="text-2xl font-bold mb-6">Portfolio Details</h1>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Image -->
+        <div class="bg-gray-300 h-64 w-full rounded"></div>
+
+        <!-- Details -->
+        <div>
+          <h2 class="text-xl font-bold mb-1">Desain Bla bla</h2>
+          <p class="text-xs text-gray-500 mb-4">From : 23 Juni 2023</p>
+          <p class="text-sm text-gray-700 mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+          </p>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 text-sm border rounded-full">Desain Web</span>
+            <span class="px-3 py-1 text-sm border rounded-full">Desain Web</span>
+            <span class="px-3 py-1 text-sm border rounded-full">Desain Web</span>
+          </div>
+
+          <!-- Cost & Duration -->
+          <div class="flex gap-8 text-sm">
+            <div>
+              <p class="text-gray-500">Project Cost</p>
+              <p class="font-bold">$400-$600</p>
+            </div>
+            <div>
+              <p class="text-gray-500">Project Duration</p>
+              <p class="font-bold">1-2 Months</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
