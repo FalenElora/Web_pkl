@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/script1.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Navbar -->
+    <header class="bg-white shadow sticky top-0 z-50">
+      <nav class="px-6 py-4 flex items-center justify-between flex-wrap">
+        <div class="font-bold text-2xl z-50">Logo</div>
+
+        <div class="hidden md:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
+          <a href="#" class="hover:text-gray-500">Find Talent</a>
+          <a href="#" class="hover:text-gray-500">Explore Services</a>
+          <input type="text" placeholder="Search Project" class="border rounded px-3 py-1 text-sm w-48" />
+        </div>
+
+        <div class="hidden md:flex items-center gap-4">
+          <button class="p-2 hover:opacity-60">
+            <img src="/asset/notif.png" alt="Notif" class="w-5 h-6" />
+          </button>
+          <button class="p-2 hover:opacity-60">
+            <img src="/asset/inbox.png" alt="Inbox" class="w-6 h-5" />
+          </button>
+          <button class="text-lg hover:underline p-2">Orders</button>
+          <div class="w-12 h-12 bg-gray-500 rounded-full flex items-center justify-center text-white font-bold"></div>
+        </div>
+
+        <div class="md:hidden flex-1 ml-4 mr-2">
+          <input type="text" placeholder="Search" class="border rounded px-3 py-1 text-sm w-full" />
+        </div>
+
+        <div class="md:hidden z-50">
+          <ion-icon name="menu" id="menuBtn" class="text-3xl cursor-pointer"></ion-icon>
+        </div>
+      </nav>
+
+      <div id="navLinks" class="hidden md:hidden flex flex-col space-y-4 bg-white shadow mt-2 px-6 py-6 z-40 rounded text-left">
+        <a href="#" class="hover:text-gray-500">Find Talent</a>
+        <a href="#" class="hover:text-gray-500">Explore Services</a>
+        <a href="#" class="hover:text-gray-500">Notification</a>
+        <a href="#" class="hover:text-gray-500">Message</a>
+        <a href="#" class="hover:text-gray-500">Orders</a>
+        <a href="#" class="hover:text-gray-500">Profile</a>
+      </div>
+    </header>
+
+    <!-- Membership Section -->
+    <section class="flex flex-col md:flex-row max-w-5xl mx-auto mt-10 bg-white rounded-xl shadow-md overflow-hidden">
+      
+      <aside class="md:w-1/4 border-r p-6 space-y-4">
+        <h2 class="text-2xl font-semibold mb-6">Settings</h2>
+        <ul class="space-y-2 text-gray-700">
+          <li class="text-gray-600 px-3 py-2 rounded cursor-pointer hover:bg-gray-100 hover:text-black">Account</li>
+          <li class="text-gray-600 px-3 py-2 rounded cursor-pointer hover:bg-gray-100 hover:text-black">Billing & Payments</li>
+          <li class="font-semibold text-black px-3 py-2 rounded cursor-pointer hover:bg-gray-100">Membership</li>
+          <li class="text-gray-600 px-3 py-2 rounded cursor-pointer hover:bg-gray-100 hover:text-black">Notification Settings</li>
+        </ul>
+      </aside>
+
+      
+      <main class="flex-1 p-6 bg-gray-200 rounded-xl md:rounded-none md:rounded-r-xl">
+        <h3 class="text-xl font-bold mb-6">Membership</h3>
+
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6">
+          <div class="flex flex-col items-center">
+            <div class="w-24 h-24 rounded-full bg-gray-600 mb-2"></div>
+            <button class="px-4 py-1 text-sm border border-gray-500 text-gray-700 rounded-full hover:border-black hover:text-black">
+              update profile
+            </button>
+          </div>
+
+          <div class="flex-1 space-y-4 w-full">
+           
+            <div class="flex items-center space-x-4">
+              <label class="text-sm font-bold w-32">Plan</label>
+              <div class="flex-1">
+                <p class="px-6 py-2 border border-black rounded-full text-center">Basic</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <label class="text-sm font-bold w-32">Price</label>
+              <div class="flex-1">
+                <p class="px-6 py-2 border border-black rounded-full text-center">Free</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <label class="text-sm font-bold w-32">Access</label>
+              <div class="flex-1">
+                <p class="px-6 py-2 border border-black rounded-full text-center">Limited</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <label class="text-sm font-bold w-32">Download</label>
+              <div class="flex-1">
+                <p class="px-6 py-2 border border-black rounded-full text-center">No</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <label class="text-sm font-bold w-32">Support</label>
+              <div class="flex-1">
+                <p class="px-6 py-2 border border-black rounded-full text-center">No</p>
+              </div>
+            </div>
+
+            
+            <div class="flex justify-end mt-4">
+              <button class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">
+                Choose This Plan
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-200 text-left py-10 px-6 mt-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+       
+        <div class="flex flex-col space-y-2">
+          <button class="text-base text-gray-500 hover:text-black">For Clients</button>
+          <button class="text-base hover:text-gray-500">How to Hire</button>
+          <button class="text-base hover:text-gray-500">How to Hire</button>
+          <button class="text-base hover:text-gray-500">How to Hire</button>
+          <button class="text-base hover:text-gray-500">How to Hire</button>
+          <button class="text-base hover:text-gray-500">How to Hire</button>
+        </div>
+
+       
+        <div class="flex flex-col space-y-2">
+          <button class="text-base text-gray-500 hover:text-black">For Clients</button>
+          <button class="text-base hover:text-gray-500">How to Hire</button>
+          <button class="text-base hover:text-gray-500">How to Hire</button>
+          <button class="text-base hover:text-gray-500">How to Hire</button>
+          <button class="text-base hover:text-gray-500">How to Hire</button>
+          <button class="text-base hover:text-gray-500">How to Hire</button>
+        </div>
+
+        <div class="flex flex-col space-y-2">
+          <button class="text-base text-gray-500 hover:text-black">For Clients</button>
+          <button class="text-base hover:text-gray-500">How to Hire</button>
+          <button class="text-base hover:text-gray-500">How to Hire</button>
+          <button class="text-base hover:text-gray-500">How to Hire</button>
+          <button class="text-base hover:text-gray-500">How to Hire</button>
+          <button class="text-base hover:text-gray-500">How to Hire</button>
+        </div>
+
+        <div class="flex flex-col space-y-2">
+          <button class="text-base text-gray-500 hover:text-black">For Clients</button>
+          <button class="text-base hover:text-gray-500">How to Hire</button>
+          <button class="text-base hover:text-gray-500">How to Hire</button>
+          <button class="text-base hover:text-gray-500">How to Hire</button>
+          <button class="text-base hover:text-gray-500">How to Hire</button>
+          <button class="text-base hover:text-gray-500">How to Hire</button>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const navLinks = document.getElementById("navLinks");
+
+      let menuOpen = false;
+      menuBtn.addEventListener("click", () => {
+        menuOpen = !menuOpen;
+        menuBtn.name = menuOpen ? "close" : "menu";
+        navLinks.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
