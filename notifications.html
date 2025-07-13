@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notification Settings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navbar -->
+  <header class="flex justify-between items-center px-6 py-4 border-b">
+    <div class="font-bold text-lg">Logo</div>
+    <nav class="flex items-center gap-6">
+      <a href="#" class="hover:text-gray-500">Find Talent</a>
+      <a href="#" class="hover:text-gray-500">Explore Services</a>
+      <div class="relative">
+        <input type="text" placeholder="Search Project" class="border px-3 py-1 rounded w-48" />
+        <button class="absolute right-2 top-2 text-gray-500">
+          🔍
+        </button>
+      </div>
+      <span>🔔</span>
+      <span>📧</span>
+      <a href="#" class="hover:text-gray-500">Orders</a>
+      <div class="w-8 h-8 bg-gray-400 rounded-full"></div>
+    </nav>
+  </header>
+
+  <!-- Main Settings Layout -->
+  <div class="grid grid-cols-1 md:grid-cols-5 gap-6 px-8 py-12">
+    <!-- Sidebar -->
+    <aside class="space-y-4 md:col-span-1">
+      <h2 class="text-2xl font-semibold">Settings</h2>
+      <ul class="space-y-2 text-gray-400">
+        <li><a href="#" class="hover:text-black">Account</a></li>
+        <li><a href="#" class="hover:text-black">Billing & Payments</a></li>
+        <li><a href="#" class="hover:text-black">Membership</a></li>
+        <li class="text-black font-semibold">Notification Settings</li>
+      </ul>
+    </aside>
+
+    <!-- Notification Content -->
+    <section class="bg-gray-200 rounded-lg p-6 md:col-span-4">
+      <h3 class="text-xl font-semibold mb-6">Notification Settings</h3>
+      
+      <div class="space-y-6">
+        <div class="flex justify-between items-center">
+          <span class="font-medium">Email Notifications</span>
+          <div class="flex items-center gap-2">
+            <button class="px-4 py-1 rounded-full border bg-white hover:bg-gray-300">yes</button>
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center">
+          <span class="font-medium">Message Alerts</span>
+          <div class="flex items-center gap-2">
+            <button class="px-4 py-1 rounded-full border bg-white hover:bg-gray-300">no</button>
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center">
+          <span class="font-medium">Project Updates</span>
+          <div class="flex items-center gap-2">
+            <button class="px-4 py-1 rounded-full border bg-white hover:bg-gray-300">yes</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8">
+        <button class="bg-gray-600 text-white px-6 py-2 rounded hover:bg-gray-700">Save Change</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-200 mt-10 p-8 grid grid-cols-2 sm:grid-cols-4 gap-8 text-sm text-gray-600">
+    <div>
+      <h4 class="font-semibold mb-2">for clients</h4>
+      <ul class="space-y-1">
+        <li>how to hire</li>
+        <li>Project Catalog</li>
+        <li>Enterprise</li>
+        <li>Any Hire</li>
+        <li>Business Plus</li>
+        <li>Contract-to-hire</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-2">for talents</h4>
+      <ul class="space-y-1">
+        <li>how to hire</li>
+        <li>how to</li><li>how to</li><li>how to</li><li>how to</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-2">resources</h4>
+      <ul class="space-y-1">
+        <li>how to hire</li>
+        <li>how to</li><li>how to</li><li>how to</li><li>how to</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-2">company</h4>
+      <ul class="space-y-1">
+        <li>how to hire</li>
+        <li>how to</li><li>how to</li><li>how to</li><li>how to</li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
