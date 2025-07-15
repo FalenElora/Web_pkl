@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+  <div class="bg-white p-6 rounded shadow-lg max-w-4xl w-full">
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-2xl font-bold">Project Details</h2>
+      <button class="text-2xl font-semibold hover:text-red-500">×</button>
+    </div>
+
+    <!-- Projects -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      
+      <!-- Project Card 1 -->
+      <div class="bg-gray-200 rounded-lg p-4">
+        <p><span class="font-semibold">Project Name:</span> Design Apk bla bla bla</p>
+        <p><span class="font-semibold">Deadline:</span> 22 December 2025</p>
+        <p><span class="font-semibold">Team:</span> Gendis, Kania</p>
+        <p class="flex items-center gap-2 mt-1">
+          <span class="font-semibold">Progress:</span>
+          <progress value="50" max="100" class="w-full h-2">50%</progress>
+          <span class="text-sm">50%</span>
+        </p>
+        <p class="mt-1"><span class="font-semibold">Status:</span> On Progress</p>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="bg-gray-200 rounded-lg p-4">
+        <p><span class="font-semibold">Project Name:</span> Design Animasi bla bla</p>
+        <p><span class="font-semibold">Deadline:</span> 15 July 2025</p>
+        <p><span class="font-semibold">Team:</span> Ami, Falen</p>
+        <p class="flex items-center gap-2 mt-1">
+          <span class="font-semibold">Progress:</span>
+          <progress value="20" max="100" class="w-full h-2">20%</progress>
+          <span class="text-sm">20%</span>
+        </p>
+        <p class="mt-1"><span class="font-semibold">Status:</span> On Progress</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
