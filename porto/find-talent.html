@@ -1,49 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Find Talent</title>
-    <!-- Pakai Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-white text-gray-800 font-sans">
-    
-    <!-- Navbar -->
-    <header class="bg-white shadow sticky top-0 z-50">
-    <nav class="px-6 py-4 relative flex items-center justify-between flex-wrap">
+<html lang="en" class="bg-gray-100">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find Talent</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <nav class="px-6 py-4 flex items-center justify-between flex-wrap relative">
       <div class="font-bold text-2xl z-50">LOGO</div>
 
+      <!-- Center nav -->
       <div class="hidden md:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
-        <a href="#" class="hover:text-gray-500">Find Talent</a>
-        <a href="#" class="hover:text-gray-500">Explore Services</a>
+        <a href="find-talent.html" class="hover:text-gray-500">Find Talent</a>
+        <a href="explore-services.html" class="hover:text-gray-500">Explore Services</a>
         <input type="text" placeholder="Search Project" class="border rounded px-3 py-1 text-sm w-48" />
       </div>
 
+
+      <!-- Right nav -->
       <div class="hidden md:flex items-center gap-4">
-       <button class="p-2 hover:opacity-60">
-       <img src="notif.png" alt="Notif Icon" class="w-5 h-6" />
-    </button>
-    <button class="p-2 hover:opacity-60">
-       <img src="inbox.png" alt="Inbox Icon" class="w-6 h-5" />
-    </button>
-    <button class="text-lg hover:underline p-2">Orders</button>
-    <div class="w-12 h-12 bg-gray-500 rounded-full flex items-center justify-center text-white font-bold"></div>
+        <button class="p-2 hover:opacity-60">
+          <img src="notif.png" alt="Notif Icon" class="w-5 h-6" />
+        </button>
+        <button class="p-2 hover:opacity-60">
+          <img src="inbox.png" alt="Inbox Icon" class="w-6 h-5" />
+        </button>
+        <!-- Ganti button Orders jadi link -->
+        <a href="order.html" class="text-lg hover:underline p-2">Orders</a>
+        <div class="w-10 h-10 bg-gray-500 rounded-full flex items-center justify-center text-white font-bold text-sm">U</div>
       </div>
 
+      <!-- Mobile search -->
       <div class="flex-1 md:hidden ml-4 mr-2">
         <input type="text" placeholder="Search" class="border rounded px-3 py-1 text-sm w-full" />
       </div>
 
+      <!-- Mobile menu -->
       <div class="md:hidden z-50">
         <ion-icon name="menu" id="menuBtn" class="text-3xl cursor-pointer"></ion-icon>
       </div>
     </nav>
 
-    <div id="navLinks"
-  class="hidden md:hidden flex flex-col space-y-4 bg-white shadow mt-2 px-6 py-6 z-40 rounded text-left">
-
+    <!-- Mobile nav links -->
+    <div id="navLinks" class="hidden md:hidden flex flex-col space-y-4 bg-white shadow mt-2 px-6 py-6 z-40 rounded text-left">
       <a href="#" class="hover:text-gray-500 block">Find Talent</a>
       <a href="#" class="hover:text-gray-500 block">Explore Services</a>
       <a href="#" class="hover:text-gray-500 block">Notification</a>
@@ -53,88 +57,64 @@
     </div>
   </header>
 
-    <!-- Category Tags -->
-    <div class="flex gap-2 overflow-x-auto px-4 py-3">
-      <span class="bg-gray-200 text-sm px-3 py-1 rounded-full">Digital Marketing</span>
-      <span class="bg-gray-200 text-sm px-3 py-1 rounded-full">Digital Marketing</span>
-      <span class="bg-gray-200 text-sm px-3 py-1 rounded-full">Digital Marketing</span>
-      <span class="bg-gray-200 text-sm px-3 py-1 rounded-full">Digital Marketing</span>
+  <!-- Category Tags -->
+  <div class="flex gap-2 overflow-x-auto px-4 py-3 scrollbar-hide">
+    <span class="bg-gray-200 text-sm px-3 py-1 rounded-full whitespace-nowrap">Digital Marketing</span>
+    <span class="bg-gray-200 text-sm px-3 py-1 rounded-full whitespace-nowrap">Design</span>
+    <span class="bg-gray-200 text-sm px-3 py-1 rounded-full whitespace-nowrap">Writing</span>
+    <span class="bg-gray-200 text-sm px-3 py-1 rounded-full whitespace-nowrap">Video & Animation</span>
+    <span class="bg-gray-200 text-sm px-3 py-1 rounded-full whitespace-nowrap">Programming</span>
+  </div>
+
+  <!-- Talent Cards -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+    <!-- Card Template -->
+    <div class="border rounded-lg p-4 relative text-center shadow-sm hover:shadow-md transition">
+      <span class="absolute top-2 right-3 text-sm text-gray-500">$20/hr</span>
+      <div class="w-20 h-20 mx-auto rounded-full bg-gray-300 mb-2"></div>
+      <h3 class="font-semibold">Gendis</h3>
+      <p class="text-sm text-gray-600 flex items-center justify-center gap-1">
+        <span class="text-yellow-500">★</span> 4.9 (153)
+      </p>
+      <div class="flex flex-wrap justify-center gap-2 mt-3 text-xs">
+        <span class="px-3 py-1 bg-gray-100 rounded-full">Profesional UI/UX</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full">Customer Experience</span>
+      </div>
+      <button class="mt-4 px-4 py-2 bg-gray-800 text-white rounded-full text-sm">See Profile</button>
     </div>
 
-    <!-- Talent Cards -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
-      <!-- Talent Card -->
-      <div class="border rounded-lg p-4 relative text-center shadow-sm hover:shadow-md transition">
-        <span class="absolute top-2 right-3 text-sm text-gray-500">$20/hr</span>
-        <div class="w-20 h-20 mx-auto rounded-full bg-gray-300 mb-2"></div>
-        <h3 class="font-semibold">Gendis</h3>
-        <p class="text-sm text-gray-600 flex items-center justify-center gap-1">
-          <span class="text-yellow-500">★</span> 4.9 (153)
-        </p>
-        <div class="flex flex-wrap justify-center gap-2 mt-3 text-xs">
-          <span class="px-3 py-1 bg-gray-100 rounded-full">Profesional UI/UX</span>
-          <span class="px-3 py-1 bg-gray-100 rounded-full">Customer Experience</span>
-        </div>
-        <button class="mt-4 px-4 py-2 bg-gray-800 text-white rounded-full text-sm">see profile</button>
+    <!-- Duplikat card contoh -->
+    <div class="border rounded-lg p-4 relative text-center shadow-sm hover:shadow-md transition">
+      <span class="absolute top-2 right-3 text-sm text-gray-500">$25/hr</span>
+      <div class="w-20 h-20 mx-auto rounded-full bg-gray-300 mb-2"></div>
+      <h3 class="font-semibold">Sari</h3>
+      <p class="text-sm text-gray-600 flex items-center justify-center gap-1">
+        <span class="text-yellow-500">★</span> 5.0 (200)
+      </p>
+      <div class="flex flex-wrap justify-center gap-2 mt-3 text-xs">
+        <span class="px-3 py-1 bg-gray-100 rounded-full">Graphic Designer</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full">Brand Identity</span>
       </div>
-
-      <!-- Talent Card -->
-      <div class="border rounded-lg p-4 relative text-center shadow-sm hover:shadow-md transition">
-        <span class="absolute top-2 right-3 text-sm text-gray-500">$20/hr</span>
-        <div class="w-20 h-20 mx-auto rounded-full bg-gray-300 mb-2"></div>
-        <h3 class="font-semibold">Gendis</h3>
-        <p class="text-sm text-gray-600 flex items-center justify-center gap-1">
-          <span class="text-yellow-500">★</span> 4.9 (153)
-        </p>
-        <div class="flex flex-wrap justify-center gap-2 mt-3 text-xs">
-          <span class="px-3 py-1 bg-gray-100 rounded-full">Profesional UI/UX</span>
-          <span class="px-3 py-1 bg-gray-100 rounded-full">Customer Experience</span>
-        </div>
-        <button class="mt-4 px-4 py-2 bg-gray-800 text-white rounded-full text-sm">see profile</button>
-      </div>
-
-      <!-- Talent Card -->
-      <div class="border rounded-lg p-4 relative text-center shadow-sm hover:shadow-md transition">
-        <span class="absolute top-2 right-3 text-sm text-gray-500">$20/hr</span>
-        <div class="w-20 h-20 mx-auto rounded-full bg-gray-300 mb-2"></div>
-        <h3 class="font-semibold">Gendis</h3>
-        <p class="text-sm text-gray-600 flex items-center justify-center gap-1">
-          <span class="text-yellow-500">★</span> 4.9 (153)
-        </p>
-        <div class="flex flex-wrap justify-center gap-2 mt-3 text-xs">
-          <span class="px-3 py-1 bg-gray-100 rounded-full">Profesional UI/UX</span>
-          <span class="px-3 py-1 bg-gray-100 rounded-full">Customer Experience</span>
-        </div>
-        <button class="mt-4 px-4 py-2 bg-gray-800 text-white rounded-full text-sm">see profile</button>
-      </div>
-
-      <div class="border rounded-lg p-4 relative text-center shadow-sm hover:shadow-md transition">
-        <span class="absolute top-2 right-3 text-sm text-gray-500">$20/hr</span>
-        <div class="w-20 h-20 mx-auto rounded-full bg-gray-300 mb-2"></div>
-        <h3 class="font-semibold">Gendis</h3>
-        <p class="text-sm text-gray-600 flex items-center justify-center gap-1">
-          <span class="text-yellow-500">★</span> 4.9 (153)
-        </p>
-        <div class="flex flex-wrap justify-center gap-2 mt-3 text-xs">
-          <span class="px-3 py-1 bg-gray-100 rounded-full">Profesional UI/UX</span>
-          <span class="px-3 py-1 bg-gray-100 rounded-full">Customer Experience</span>
-        </div>
-        <button class="mt-4 px-4 py-2 bg-gray-800 text-white rounded-full text-sm">see profile</button>
-      </div>
-
-      <div class="border rounded-lg p-4 relative text-center shadow-sm hover:shadow-md transition">
-        <span class="absolute top-2 right-3 text-sm text-gray-500">$20/hr</span>
-        <div class="w-20 h-20 mx-auto rounded-full bg-gray-300 mb-2"></div>
-        <h3 class="font-semibold">Gendis</h3>
-        <p class="text-sm text-gray-600 flex items-center justify-center gap-1">
-          <span class="text-yellow-500">★</span> 4.9 (153)
-        </p>
-        <div class="flex flex-wrap justify-center gap-2 mt-3 text-xs">
-          <span class="px-3 py-1 bg-gray-100 rounded-full">Profesional UI/UX</span>
-          <span class="px-3 py-1 bg-gray-100 rounded-full">Customer Experience</span>
-        </div>
-        <button class="mt-4 px-4 py-2 bg-gray-800 text-white rounded-full text-sm">see profile</button>
-      </div>
+      <button class="mt-4 px-4 py-2 bg-gray-800 text-white rounded-full text-sm">See Profile</button>
     </div>
-  </body>
+
+    <div class="border rounded-lg p-4 relative text-center shadow-sm hover:shadow-md transition">
+      <span class="absolute top-2 right-3 text-sm text-gray-500">$30/hr</span>
+      <div class="w-20 h-20 mx-auto rounded-full bg-gray-300 mb-2"></div>
+      <h3 class="font-semibold">Bayu</h3>
+      <p class="text-sm text-gray-600 flex items-center justify-center gap-1">
+        <span class="text-yellow-500">★</span> 4.8 (180)
+      </p>
+      <div class="flex flex-wrap justify-center gap-2 mt-3 text-xs">
+        <span class="px-3 py-1 bg-gray-100 rounded-full">Frontend Developer</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full">React Specialist</span>
+      </div>
+      <button class="mt-4 px-4 py-2 bg-gray-800 text-white rounded-full text-sm">See Profile</button>
+    </div>
+  </div>
+
+  <!-- Icon CDN -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
 </html>

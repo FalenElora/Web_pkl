@@ -4,59 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio Details</title>
-  <!-- Pakai Tailwind CDN instan -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Ionicons CDN -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body class="bg-white text-gray-800 font-sans min-h-screen">
   <!-- Navbar -->
   <header class="bg-white shadow sticky top-0 z-50">
-    <nav class="px-6 py-4 relative flex items-center justify-between flex-wrap">
+    <nav class="px-6 py-4 flex items-center justify-between">
+      <div class="font-bold text-2xl">LOGO</div>
 
-      <div class="font-bold text-2xl z-50">LOGO</div>
-
+      <!-- Desktop Nav -->
       <div class="hidden md:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
-        <a href="#" class="hover:text-gray-500">Find Talent</a>
-        <a href="#" class="hover:text-gray-500">Explore Services</a>
-        <input type="text" placeholder="Search Project" class="border rounded px-3 py-1 text-sm w-48" />
+          <a href="find-talent.html" class="hover:text-gray-500">Find Talent</a>
+          <a href="explore-services.html" class="hover:text-gray-500">Explore Services</a>
+          <input type="text" placeholder="Search Project" class="border rounded px-3 py-1 text-sm w-48" />
       </div>
 
       <div class="hidden md:flex items-center gap-4">
-       <button class="p-2 hover:opacity-60">
-       <img src="notif.png" alt="Notif Icon" class="w-5 h-6" />
-    </button>
-    <button class="p-2 hover:opacity-60">
-       <img src="inbox.png" alt="Inbox Icon" class="w-6 h-5" />
-    </button>
-    <button class="text-lg hover:underline p-2">Orders</button>
-    <div class="w-12 h-12 bg-gray-500 rounded-full flex items-center justify-center text-white font-bold"></div>
+        <button class="p-2 hover:opacity-60">
+          <img src="notif.png" alt="Notif Icon" class="w-5 h-6" />
+        </button>
+        <button class="p-2 hover:opacity-60">
+          <img src="inbox.png" alt="Inbox Icon" class="w-6 h-5" />
+        </button>
+        <!-- Ganti button Orders jadi link -->
+        <a href="order.html" class="text-lg hover:underline p-2">Orders</a>
+        <div class="w-10 h-10 bg-gray-500 rounded-full flex items-center justify-center text-white font-bold text-sm">U</div>
       </div>
 
-      <div class="flex-1 md:hidden ml-4 mr-2">
-        <input type="text" placeholder="Search" class="border rounded px-3 py-1 text-sm w-full" />
-      </div>
-
-      <div class="md:hidden z-50">
-        <ion-icon name="menu" id="menuBtn" class="text-3xl cursor-pointer"></ion-icon>
-      </div>
+      <!-- Mobile Hamburger -->
+      <button id="menuBtn" class="md:hidden text-3xl">
+        <ion-icon name="menu"></ion-icon>
+      </button>
     </nav>
 
+    <!-- Mobile Nav -->
     <div id="navLinks"
-  class="hidden md:hidden flex flex-col space-y-4 bg-white shadow mt-2 px-6 py-6 z-40 rounded text-left">
-
+      class="hidden md:hidden flex flex-col space-y-4 bg-white shadow px-6 py-6">
       <a href="#" class="hover:text-gray-500 block">Find Talent</a>
       <a href="#" class="hover:text-gray-500 block">Explore Services</a>
       <a href="#" class="hover:text-gray-500 block">Notification</a>
       <a href="#" class="hover:text-gray-500 block">Message</a>
       <a href="#" class="hover:text-gray-500 block">Orders</a>
       <a href="#" class="hover:text-gray-500 block">Profile</a>
+      <input type="text" placeholder="Search" class="border rounded px-3 py-1 text-sm w-full" />
     </div>
   </header>
 
   <!-- Content -->
   <main class="flex items-center justify-center p-10">
     <div class="bg-white max-w-4xl w-full rounded-lg p-8 relative shadow">
-      <button class="absolute top-4 right-4 text-xl">&times;</button>
+
+      <!-- Tombol silang -->
+      <a href="portofolio.html"
+     class="absolute top-2 right-2 sm:top-4 sm:right-4 md:top-6 md:right-6 text-2xl sm:text-3xl font-bold hover:text-gray-500 transition">
+    &times;
+  </a>
+
       <h1 class="text-2xl font-bold mb-6">Portfolio Details</h1>
 
       <div class="grid md:grid-cols-2 gap-6">
@@ -74,8 +82,8 @@
           <!-- Tags -->
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="px-3 py-1 text-sm border rounded-full">Desain Web</span>
-            <span class="px-3 py-1 text-sm border rounded-full">Desain Web</span>
-            <span class="px-3 py-1 text-sm border rounded-full">Desain Web</span>
+            <span class="px-3 py-1 text-sm border rounded-full">UI/UX</span>
+            <span class="px-3 py-1 text-sm border rounded-full">Development</span>
           </div>
 
           <!-- Cost & Duration -->
@@ -93,5 +101,15 @@
       </div>
     </div>
   </main>
+
+  <!-- Mobile Toggle Script -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
