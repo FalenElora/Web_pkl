@@ -9,68 +9,64 @@
 <body class="bg-white text-gray-900">
 
   <!-- Header -->
-  <nav class="flex items-center justify-between px-6 py-4 bg-white shadow sticky top-0 z-50">
+  <nav class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 px-6 py-4 bg-white shadow sticky top-0 z-50">
     <div class="font-bold text-3xl">Logo</div>
 
-    <div class="flex items-center space-x-4">
-      <button class="text-lg hover:underline px-8">Find Talent</button>
-      <button class="text-lg hover:underline pr-8">Explore Services</button>
-      <div class="relative">
-        <input type="text" placeholder="Search Project" class="border rounded px-3 py-1 text-base bg-gray-100" />
+    <div class="flex flex-wrap items-center gap-4 w-full sm:w-auto">
+      <button class="text-sm hover:underline px-4">Find Talent</button>
+      <button class="text-sm hover:underline px-4">Explore Services</button>
+      <div class="relative w-full sm:w-56">
+        <input type="text" placeholder="Search Project" class="w-full border rounded px-3 py-1 text-sm bg-gray-100" />
         <span class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500">🔍</span>
       </div>
     </div>
 
-    <div class="flex items-center space-x-4">
-      <button class="text-xl">🔔</button>
-      <button class="text-xl">✉️</button>
-      <span>Orders</span>
-      <div class="w-8 h-8 rounded-full bg-gray-500"></div>
+    <div class="flex items-center gap-3">
+      <button class="text-lg">🔔</button>
+      <button class="text-lg">✉️</button>
+      <span class="text-sm">Orders</span>
+      <div class="w-6 h-6 rounded-full bg-gray-500"></div>
     </div>
   </nav>
 
   <!-- Kategori -->
-  <div class="flex items-center space-x-2 px-6 py-4 overflow-x-auto">
-    <button class="border px-4 py-1 rounded-full whitespace-nowrap">‹</button>
+  <div class="flex items-center gap-2 px-6 py-4 overflow-x-auto whitespace-nowrap">
+    <button class="border px-3 py-1 rounded-full">‹</button>
     <span class="border rounded-full px-4 py-1">Digital Marketing</span>
-    <span class="border rounded-full px-4 py-1">Digital Marketing</span>
-    <span class="border rounded-full px-4 py-1">Digital Marketing</span>
-    <span class="border rounded-full px-4 py-1">Digital Marketing</span>
-    <button class="border px-4 py-1 rounded-full whitespace-nowrap">›</button>
+    <span class="border rounded-full px-4 py-1">UI/UX Design</span>
+    <span class="border rounded-full px-4 py-1">Web Development</span>
+    <span class="border rounded-full px-4 py-1">Content Writing</span>
+    <button class="border px-3 py-1 rounded-full">›</button>
   </div>
 
   <!-- Tracking Section -->
   <div class="px-6 py-8">
     <h2 class="text-2xl font-semibold mb-6">Tracking Your Order</h2>
 
-    <div class="bg-gray-300 p-8 rounded-lg flex justify-between items-center">
+    <div class="bg-gray-300 p-6 rounded-lg flex flex-col lg:flex-row items-center justify-between gap-4">
       <!-- Step 1 -->
       <div class="flex flex-col items-center text-center">
-        <div class="w-10 h-10 bg-white text-gray-700 rounded-full flex items-center justify-center mb-2">
-          ✔️
-        </div>
+        <div class="w-10 h-10 bg-white text-gray-700 rounded-full flex items-center justify-center mb-2">✔️</div>
         <p class="text-sm">To Do</p>
       </div>
 
       <!-- Line -->
-      <div class="h-1 bg-white flex-1 mx-2"></div>
+      <div class="h-1 bg-white w-full lg:h-1 lg:w-10 flex-shrink-0 hidden lg:block"></div>
+      <div class="w-1 h-10 bg-white lg:hidden"></div>
 
       <!-- Step 2 -->
       <div class="flex flex-col items-center text-center">
-        <div class="w-10 h-10 bg-white text-gray-700 rounded-full flex items-center justify-center mb-2">
-          ✔️
-        </div>
+        <div class="w-10 h-10 bg-white text-gray-700 rounded-full flex items-center justify-center mb-2">✔️</div>
         <p class="text-sm">On Progress</p>
       </div>
 
       <!-- Line -->
-      <div class="h-1 bg-white flex-1 mx-2"></div>
+      <div class="h-1 bg-white w-full lg:h-1 lg:w-10 flex-shrink-0 hidden lg:block"></div>
+      <div class="w-1 h-10 bg-white lg:hidden"></div>
 
       <!-- Step 3 -->
       <div class="flex flex-col items-center text-center">
-        <div class="w-10 h-10 bg-white text-gray-700 rounded-full flex items-center justify-center mb-2">
-          ✔️
-        </div>
+        <div class="w-10 h-10 bg-white text-gray-700 rounded-full flex items-center justify-center mb-2">✔️</div>
         <p class="text-sm">Done</p>
       </div>
     </div>
