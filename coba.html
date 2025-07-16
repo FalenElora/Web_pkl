@@ -1,12 +1,14 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Product</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="js/script1.js"></script>
-  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <style>
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
 </head>
 <body class="bg-white text-gray-800">
 
@@ -137,166 +139,8 @@
     </div>
   </header>
 
-
-
- <!-- Search Section -->
-      <section class="bg-gray-200 text-center py-10 px-6 m-5 rounded-xl">
-        <h1 class="text-2xl md:text-4xl font-semibold m-4 md:m-16">
-          How Can We Help you <span class="text-gray-500">Gendis</span>?
-        </h1>
-
-        <input
-          type="text"
-          placeholder="Search"
-          class="w-full sm:w-2/3 md:w-1/2 px-4 py-2 md:py-3 rounded-3xl border "
-        />
-
-        <div class="flex flex-col items-center justify-center gap-4 m-6">
-        
-
-          <div class="flex flex-wrap justify-center gap-2">
-            <h2 class="font-semibold">Popular Searches</h2>
-            <button class="text-sm px-4 py-1 rounded-full border border-black">
-              Web Development
-            </button>
-            <button class="text-sm px-4 py-1 rounded-full border border-black">
-             Web Development
-            </button>
-            <button class="text-sm px-4 py-1 rounded-full border border-black">
-              Web Development
-            </button>
-          </div>
-        </div>
-      </section>
-
- <!-- Results Section -->
-
-<section class="text-left py-10 px-6">
-  <h2 class="text-2xl font-semibold mb-12">111 Results For Web Development</h2>
-  <div class="flex mb-10 gap-6">
-        <button
-          id="tabFreelancer"
-          class="tab-btn px-6 py-1 text-base md:text-xl text-black rounded bg-gray-200"
-          onclick="switchTab('Freelancer')"
-        >
-          Freelancer
-        </button>
-        <button
-          id="tabClient"
-          class="tab-btn px-10 py-1 text-base md:text-xl text-black rounded border border-black"
-          onclick="switchTab('Client')"
-        >
-          Client
-        </button>
-      </div>
-
-      <div id="panelFreelancer" class=" mb-8">
-       <div class="flex-shrink-0  border border-black rounded-xl text-left m-4 p-4">
-              <p class="text-2xl md:text-3xl mb-2">When Bla bla blaa</p>
-              <p class="text-sm md:text-xl mb-8">You can see bla bla blaaaaaaaaaaaaaaaaa</p>
-              <button class="text-sm md:text-base font-bold hover:underline">Continue Reading</button>              
-        </div>
-        <div class="flex-shrink-0  border border-black rounded-xl text-left m-4 p-4">
-              <p class="text-2xl md:text-3xl mb-2">When Bla bla blaa</p>
-              <p class="text-sm md:text-xl mb-8">You can see bla bla blaaaaaaaaaaaaaaaaa</p>
-              <button class="text-sm md:text-base font-bold hover:underline">Continue Reading</button>              
-        </div>
-        <div class="flex-shrink-0  border border-black rounded-xl text-left m-4 p-4">
-              <p class="text-2xl md:text-3xl mb-2">When Bla bla blaa</p>
-              <p class="text-sm md:text-xl mb-8">You can see bla bla blaaaaaaaaaaaaaaaaa</p>
-              <button class="text-sm md:text-base font-bold hover:underline">Continue Reading</button>              
-        </div>
-      </div>
-
-      <div id="panelClient" class="mb-8">
-       <div class="flex-shrink-0  border border-black rounded-xl text-left m-4 p-4">
-              <p class="text-2xl md:text-3xl mb-2">When Bla bla blaa</p>
-              <p class="text-sm md:text-xl mb-8">You can see bla bla bla</p>
-              <button class="text-sm md:text-base font-bold hover:underline">Continue Reading</button>              
-        </div>
-        <div class="flex-shrink-0  border border-black rounded-xl text-left m-4 p-4">
-              <p class="text-2xl md:text-3xl mb-2">When Bla bla blaa</p>
-              <p class="text-sm md:text-xl mb-8">You can see bla bla bla</p>
-              <button class="text-sm md:text-base font-bold hover:underline">Continue Reading</button>              
-        </div>
-        <div class="flex-shrink-0  border border-black rounded-xl text-left m-4 p-4">
-              <p class="text-2xl md:text-3xl mb-2">When Bla bla blaa</p>
-              <p class="text-sm md:text-xl mb-8">You can see bla bla bla</p>
-              <button class="text-sm md:text-base font-bold hover:underline">Continue Reading</button>              
-        </div>
-    </div>
-    <div class="flex justify-end">
-        <button class="text-base px-4 py-1 rounded border border-black mr-4 hover:bg-gray-200">
-          See More
-        </button>
-    </div>
-  </section>
-
-  <!-- Recomendation -->
-  <section class="px-6 py-8">
-    <h2 class="text-2xl font-semibold mb-6">Real result from clients</h2>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8">
-        <button class="bg-gray-200 text-sm md:text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
-        <button class="bg-gray-200 text-sm md:text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
-        <button class="bg-gray-200 text-sm md:text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
-        <button class="bg-gray-200 text-sm md:text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
-        <button class="bg-gray-200 text-sm md:text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
-        <button class="bg-gray-200 text-sm md:text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
-        <button class="bg-gray-200 text-sm md:text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
-        <button class="bg-gray-200 text-sm md:text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
-        <button class="bg-gray-200 text-sm md:text-lg px-4 py-5 rounded shadow hover:bg-gray-500 hover:text-white">Freelancer</button>
-      </div>
-
-  </section>
-
- <!-- Footer Section -->
-<section class="bg-gray-200 text-left py-10 px-6">
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-
-    
-    <div class="flex flex-col space-y-2">
-       <button class="text-base text-gray-500 hover:text-black ">for clients</button>
-      <button class="text-base  hover:text-gray-500 ">how to hire</button>
-      <button class="text-base  hover:text-gray-500 ">how to hire</button>
-      <button class="text-base  hover:text-gray-500 ">how to hire</button>
-      <button class="text-base  hover:text-gray-500 ">how to hire</button>
-      <button class="text-base  hover:text-gray-500 ">how to hire</button>
-    </div>
-
-    
-    <div class="flex flex-col space-y-2">
-       <button class="text-base text-gray-500 hover:text-black ">for clients</button>
-      <button class="text-base  hover:text-gray-500 ">how to hire</button>
-      <button class="text-base  hover:text-gray-500 ">how to hire</button>
-      <button class="text-base  hover:text-gray-500 ">how to hire</button>
-      <button class="text-base  hover:text-gray-500 ">how to hire</button>
-      <button class="text-base  hover:text-gray-500 ">how to hire</button>
-    </div>
-
-   
-    <div class="flex flex-col space-y-2">
-       <button class="text-base text-gray-500 hover:text-black ">for clients</button>
-      <button class="text-base  hover:text-gray-500 ">how to hire</button>
-      <button class="text-base  hover:text-gray-500 ">how to hire</button>
-      <button class="text-base  hover:text-gray-500 ">how to hire</button>
-      <button class="text-base  hover:text-gray-500 ">how to hire</button>
-      <button class="text-base  hover:text-gray-500 ">how to hire</button>
-    </div>
-
-    
-    <div class="flex flex-col space-y-2">
-       <button class="text-base text-gray-500 hover:text-black ">for clients</button>
-      <button class="text-base  hover:text-gray-500 ">how to hire</button>
-      <button class="text-base  hover:text-gray-500 ">how to hire</button>
-      <button class="text-base  hover:text-gray-500 ">how to hire</button>
-      <button class="text-base  hover:text-gray-500 ">how to hire</button>
-      <button class="text-base  hover:text-gray-500 ">how to hire</button>
-    </div>
-
-  </div>
-</section>
-
- <script>
+  <!-- JS -->
+  <script>
     // Toggle Profile Dropdown Mobile
     const profileBtn = document.getElementById("profileBtn");
     const profileDropdown = document.getElementById("profileDropdown");
@@ -355,7 +199,5 @@
       }
     });
   </script>
-
 </body>
-
 </html>

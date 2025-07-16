@@ -8,35 +8,146 @@
 </head>
 <body class="bg-gray-100 text-gray-800">
 
-  <!-- Header -->
-  <nav class="flex flex-wrap md:flex-nowrap items-center justify-between px-6 py-4 bg-white shadow sticky top-0 z-50 gap-4">
-    <div class="font-bold text-2xl flex-1">Logo</div>
+   <!-- Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <nav class="px-4 py-3 bg-white shadow flex items-center justify-between md:justify-normal relative">
+      
+      <!-- Hamburger -->
+      <div class="md:hidden">
+        <button id="menuBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
 
-    <div class="flex flex-wrap items-center space-x-2 md:space-x-4 flex-1 justify-center md:justify-start">
-      <button class="text-sm md:text-base hover:underline">Find Talent</button>
-      <button class="text-sm md:text-base hover:underline">Explore Services</button>
-      <input type="text" placeholder="Search Project" class="border rounded px-2 py-1 text-sm w-full md:w-auto" />
-    </div>
+      <!-- Logo -->
+      <div class="md:hidden mx-3 text-lg font-bold">Logo</div>
 
-    <div class="space-x-2 flex-1 flex justify-end">
-      <button class="px-4 py-2 border rounded bg-gray-100 hover:bg-gray-200 text-sm">Sign In</button>
-      <button class="px-4 py-2 border rounded bg-gray-100 hover:bg-gray-200 text-sm">Login</button>
+      <!-- Search -->
+      <div class="flex-1 md:hidden">
+        <input type="text" placeholder="Search" class="w-full px-3 py-1 text-sm border rounded" />
+      </div>
+
+      <!-- Profile -->
+      <div class="md:hidden ml-3 relative">
+        <button id="profileBtn" class="w-8 h-8 bg-gray-400 rounded-full focus:outline-none"></button>
+        <div id="profileDropdown" class="hidden absolute right-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50 py-2">
+          <a href="my_profile.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Profile</a>
+          <a href="post-project.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Post Project</a>
+          <a href="portfolio.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Post a Portfolio</a>
+          <hr class="my-1">
+          <a href="settings.html" class="block px-4 py-2 text-gray-700 font-semibold hover:bg-gray-100">Settings</a>
+          <a href="account.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Account</a>
+          <a href="billing.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Billing & Payments</a>
+          <a href="membership.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Membership</a>
+          <a href="notifications.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Notification Settings</a>
+          <hr class="my-1">
+          <a href="logout.html" class="block px-4 py-2 text-red-600 hover:bg-gray-100">Logout</a>
+        </div>
+      </div>
+
+      <!-- Desktop -->
+      <div class="hidden md:flex w-full justify-between items-center">
+        <div class="font-bold text-2xl z-50">Logo</div>
+
+        <!-- Center Nav -->
+        <div class="flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
+          <a href="#" class="hover:text-gray-500">Find Talent</a>
+          <a href="#" class="hover:text-gray-500">Explore Services</a>
+          <div class="relative">
+            <input type="text" placeholder="Search Project" class="border rounded px-3 py-1 text-sm w-48 pr-10" />
+            <button class="absolute right-2 top-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M10 18a8 8 0 100-16 8 8 0 000 16z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Nav -->
+        <div class="flex items-center gap-6 relative">
+          <!-- Notification -->
+          <div class="relative">
+            <button id="notifBtn">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405M18 14.158V11a6 6 0 00-9.33-5.004" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 13v1.158c0 .538-.214 1.055-.595 1.437L4 17h5m1 0v1a3 3 0 006 0v-1m-6 0h6" />
+              </svg>
+            </button>
+            <div id="notifPanel" class="hidden absolute right-0 mt-2 w-80 bg-white border border-gray-200 rounded shadow-lg z-50 p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="font-semibold">Notifications (0)</span>
+              </div>
+              <hr class="mb-4">
+              <div class="text-center">
+                <p class="font-semibold text-gray-800">No Notifications...yet</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="relative">
+            <button id="messageBtn">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h6m-6 4h8m2 4H5a2 2 0 01-2-2V5a2 2 0 012-2h10l6 6v11a2 2 0 01-2 2z" />
+              </svg>
+            </button>
+            <div id="messagePanel" class="hidden absolute right-0 mt-2 w-80 bg-white border border-gray-200 rounded shadow-lg z-50 p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="font-semibold">Messages</span>
+              </div>
+              <hr class="mb-4">
+              <div class="text-center">
+                <p class="font-semibold text-gray-800">No messages yet</p>
+              </div>
+              <hr class="my-3">
+              <a href="message.html" class="block text-center text-blue-500 text-sm hover:underline">See all</a>
+            </div>
+          </div>
+
+          <!-- Desktop Profile -->
+          <div class="relative">
+            <button id="profileBtnDesktop" class="w-8 h-8 bg-gray-400 rounded-full focus:outline-none"></button>
+            <div id="profileDropdownDesktop" class="hidden absolute right-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50 py-2">
+              <a href="my_profile.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Profile</a>
+              <a href="post-project.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Post Project</a>
+              <a href="portfolio.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Post a Portfolio</a>
+              <hr class="my-1">
+              <a href="settings.html" class="block px-4 py-2 text-gray-700 font-semibold hover:bg-gray-100">Settings</a>
+              <a href="account.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Account</a>
+              <a href="billing.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Billing & Payments</a>
+              <a href="membership.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Membership</a>
+              <a href="notifications.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Notification Settings</a>
+              <hr class="my-1">
+              <a href="logout.html" class="block px-4 py-2 text-red-600 hover:bg-gray-100">Logout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobileMenu" class="md:hidden hidden px-6 py-4 bg-white border-t shadow space-y-3">
+      <a href="#" class="block text-gray-700 hover:underline">Find Talent</a>
+      <a href="#" class="block text-gray-700 hover:underline">Explore Services</a>
+
     </div>
-  </nav>
+  </header>
 
   <!-- Breadcrumbs -->
-  <nav class="text-xs p-4 text-gray-600">
+  <nav class="text-xs p-2 text-gray-600">
     <span class="underline">Digital Marketing</span> /
     <span class="underline">Digital Marketing</span> /
     <span class="underline">Digital Marketing</span>
   </nav>
 
   <!-- Profile Overview -->
-  <section class="p-4 max-w-6xl mx-auto flex flex-col gap-6">
+  <section class="p-4 flex flex-col gap-4">
 
     <!-- Profile Cards -->
-    <div class="flex flex-col md:flex-row gap-4">
-      <div class="p-4 bg-white rounded shadow w-full md:w-1/2 lg:w-1/3">
+    <div class="flex gap-4">
+      <div class="p-4 bg-white rounded shadow w-1/3">
         <div class="flex items-center gap-2 mb-2">
           <div class="w-12 h-12 rounded-full bg-yellow-300"></div>
           <div>
@@ -48,7 +159,7 @@
         <p class="text-xs">Total jobs</p>
       </div>
 
-      <div class="p-4 bg-white rounded shadow w-full md:w-1/2 lg:w-1/3">
+      <div class="p-4 bg-white rounded shadow w-1/3">
         <p class="font-semibold">Gendis</p>
         <button class="mt-2 bg-gray-700 text-white px-4 py-1 rounded">Contact Me</button>
         <p class="text-xs mt-1">Avg response time: 1 hour</p>
@@ -57,14 +168,14 @@
 
     <!-- Overview -->
     <div class="bg-white rounded shadow p-4">
-      <h2 class="font-semibold mb-2">View Profile</h2>
+      <h2 class="font-semibold mb-1">View Profile</h2>
       <select class="border p-1 text-sm mb-2">
         <option>All tags work</option>
       </select>
       <h3 class="font-medium">Data Scientist | Professional | Researcher</h3>
       <p class="text-sm font-semibold">$10/Hour</p>
       <p class="text-sm mt-2 text-gray-700 leading-snug">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<br />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua... <br />
         Gendis.
       </p>
     </div>
@@ -72,11 +183,11 @@
     <!-- Consultation -->
     <div class="bg-white rounded shadow p-4">
       <h2 class="font-semibold">Book a consultation</h2>
-      <div class="bg-gray-100 p-4 mt-2 rounded flex flex-col items-center text-center">
+      <div class="bg-gray-100 p-4 mt-2 rounded flex flex-col items-center">
         <div class="w-16 h-16 rounded-full bg-gray-300 mb-2"></div>
         <p class="font-semibold">Data consultation</p>
         <p class="text-sm">Up to 30 min via Zoom meeting</p>
-        <div class="flex gap-2 mt-2 flex-wrap justify-center">
+        <div class="flex gap-2 mt-2 flex-wrap">
           <button class="text-xs bg-white border px-2 py-1 rounded">Session Date</button>
           <button class="text-xs bg-white border px-2 py-1 rounded">Reservation Form</button>
         </div>
@@ -86,7 +197,7 @@
     <!-- Work History -->
     <div class="bg-white rounded shadow p-4">
       <h2 class="font-semibold">Work History</h2>
-      <div class="flex flex-wrap gap-2 mt-2 text-sm">
+      <div class="flex gap-4 mt-2 text-sm">
         <button class="px-2 py-1 bg-gray-200 rounded">Completed Work</button>
         <button class="px-2 py-1 bg-gray-100 rounded">In Progress</button>
       </div>
@@ -105,9 +216,9 @@
     <!-- Portfolio -->
     <div class="bg-white rounded shadow p-4">
       <h2 class="font-semibold">Portfolio</h2>
-      <div class="flex flex-col md:flex-row gap-4 mt-2">
-        <div class="bg-gray-200 w-full md:w-1/2 h-24 flex items-center justify-center">Data consultation</div>
-        <div class="bg-gray-200 w-full md:w-1/2 h-24 flex items-center justify-center">Data consultation</div>
+      <div class="flex gap-4 mt-2">
+        <div class="bg-gray-200 w-1/2 h-24 flex items-center justify-center">Data consultation</div>
+        <div class="bg-gray-200 w-1/2 h-24 flex items-center justify-center">Data consultation</div>
       </div>
     </div>
 
@@ -148,11 +259,77 @@
 
     <!-- Footer -->
     <footer class="bg-white shadow p-4 mt-6 text-sm text-center">
-      <div class="flex flex-col md:flex-row justify-between gap-4 text-left">
-        <div class="flex-1">
+      <div class="flex justify-between">
+        <div>
           <p class="font-semibold">Looking for another talent?</p>
-          <input type="text" class="border px-2 py-1 text-xs rounded mt-1 w-full" placeholder="Search..." />
+          <input type="text" class="border px-2 py-1 text-xs rounded mt-1" placeholder="Search..." />
         </div>
-        <div class="flex-1">
+        <div>
           <p class="font-semibold">Browse the similarity!</p>
-          <p class="text-xs underline mt-
+          <p class="text-xs underline mt-1">View all available</p>
+        </div>
+      </div>
+    </footer>
+
+  </section>
+   <script>
+    // Toggle Profile Dropdown Mobile
+    const profileBtn = document.getElementById("profileBtn");
+    const profileDropdown = document.getElementById("profileDropdown");
+    profileBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      profileDropdown.classList.toggle("hidden");
+    });
+
+    // Toggle Mobile Menu
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Toggle Desktop Notif & Msg
+    const notifBtn = document.getElementById("notifBtn");
+    const notifPanel = document.getElementById("notifPanel");
+    notifBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      notifPanel.classList.toggle("hidden");
+    });
+
+    const msgBtn = document.getElementById("messageBtn");
+    const msgPanel = document.getElementById("messagePanel");
+    msgBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      msgPanel.classList.toggle("hidden");
+    });
+
+    // Toggle Desktop Profile
+    const profileBtnDesktop = document.getElementById("profileBtnDesktop");
+    const profileDropdownDesktop = document.getElementById("profileDropdownDesktop");
+    profileBtnDesktop.addEventListener("click", (e) => {
+      e.stopPropagation();
+      profileDropdownDesktop.classList.toggle("hidden");
+    });
+
+    // Close all dropdowns when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!profileBtn.contains(e.target) && !profileDropdown.contains(e.target)) {
+        profileDropdown.classList.add("hidden");
+      }
+      if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.add("hidden");
+      }
+      if (!notifBtn.contains(e.target) && !notifPanel.contains(e.target)) {
+        notifPanel.classList.add("hidden");
+      }
+      if (!msgBtn.contains(e.target) && !msgPanel.contains(e.target)) {
+        msgPanel.classList.add("hidden");
+      }
+      if (!profileBtnDesktop.contains(e.target) && !profileDropdownDesktop.contains(e.target)) {
+        profileDropdownDesktop.classList.add("hidden");
+      }
+    });
+  </script>
+</body>
+</html>
